@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>美女册子</title>
+	<style type="text/css">
+		body{
+			background-color: #ccc;
+		}
+		#lisgirl{
+			list-style: none;
+		}
+		#lisgirl li{
+			float: left;
+			margin: 0 5px 0 5px;
+		}
+		#lisgirl img{
+			width: 130px;
+		}
+		#show{
+			clear: both;
+		}
+		#show img{
+			margin-left: 50px;
+		}
+	</style> 
+</head>
+<body>
+	<ul id="lisgirl">
+		<li><a href="../image/taobao/1.jpg" title="美女1"><img src="../image/taobao/1-small.jpg" alt="美女1"></a></li>
+		<li><a href="../image/taobao/2.jpg" title="美女2"><img src="../image/taobao/2-small.jpg" alt="美女2"></a></li>
+		<li><a href="../image/taobao/3.jpg" title="美女3"><img src="../image/taobao/3-small.jpg" alt="美女3"></a></li>
+		<li><a href="../image/taobao/4.jpg" title="美女4"><img src="../image/taobao/4-small.jpg" alt="美女4"></a></li>
+	</ul>
+	<div id="show">
+		<img id="replace" src="../image/taobao/placeholder.png" width="550px">
+	</div>
+	<p id="showtext">点击小图展现大图</p>
+	<script>
+	var ul=document.getElementById("lisgirl");
+	var links=ul.getElementsByTagName("a");
+	var img=document.getElementById("replace");
+	var p=document.getElementById("showtext");
+	for(var i=0;i<links.length;i++){
+		links[i].onclick=function(){
+			img.src=this.href;
+			p.innerText=this.title;
+			return false;
+		}
+	}
+	</script>
+</body>
+</html>
