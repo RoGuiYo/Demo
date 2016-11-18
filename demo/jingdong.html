@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>京东商品展示</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			background-color: #cccccc;
+			width: 360px;
+			height: 360px;
+			border: 1px solid red;
+			margin: auto;
+		}
+		#bigimage{
+			margin: auto;
+		}
+		
+		#listimg{
+			list-style:none;
+			border-top: 1px solid #ccc;
+			vertical-align: middle;
+
+		}
+		#listimg li{
+			float: left;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../image/shangpin/01big.jpg" id="bigimage">
+		<ul id="listimg">
+			<li><img src="../image/shangpin/01.jpg" onmouseover="changeimg(1)"></li>
+			<li><img src="../image/shangpin/02.jpg" onmouseover="changeimg(2)"></li>
+			<li><img src="../image/shangpin/03.jpg" onmouseover="changeimg(3)"></li>
+			<li><img src="../image/shangpin/04.jpg" onmouseover="changeimg(4)"></li>
+			<li><img src="../image/shangpin/05.jpg" onmouseover="changeimg(5)"></li>
+		</ul>
+	</div>
+	 <script>
+	function changeimg(num){
+	var bigimg=document.getElementById("bigimage");
+		bigimg.src="../image/shangpin/0"+num+"big.jpg";
+	}
+</script>
+</body>
+</html>
